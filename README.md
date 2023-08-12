@@ -58,7 +58,16 @@ Numeric vectors facilitate machine learning model input.
 Divide Preprocessed Data into Training and Testing Sets for model evaluation.
 Effective data preprocessing enhances data quality, ensures consistency, and simplifies feature extraction, enabling sentiment analysis models to learn patterns accurately and achieve robust sentiment classification.
 
+After preprocessing the data to ensure its quality and suitability for analysis, Proceeded to fit the sentiment analysis model using the selected algorithms: **Logistic Regression**, **Decision Tree Classifier**, **Random Forest Classifier**, and **Naive Bayes**. Each algorithm underwent a series of steps, including feature extraction, model training, and hyperparameter tuning, to optimize their performance. Here's an overview of how we fit the models and our conclusion on which algorithm is best suited for this project:
 
+##### Logistic Regression:
+Began by encoding the preprocessed tweet text into numerical features using techniques such as TF-IDF (Term Frequency-Inverse Document Frequency). These features were then fed into the Logistic Regression model. We performed a grid search to find the optimal regularization parameter (C) through cross-validation. The resulting model was trained on the training set and evaluated on the testing set using metrics like accuracy, precision, recall, and F1-score.
+##### Decision Tree Classifier:
+For the Decision Tree Classifier, Used the preprocessed features as inputs and trained the model on the training set. To avoid overfitting, we explored different tree depths and minimum samples per leaf during the tuning process. The performance of the model was assessed using the same set of evaluation metrics.
+##### Random Forest Classifier:
+The Random Forest Classifier was trained by aggregating the predictions of multiple decision trees. Adjusted hyperparameters such as the number of trees and maximum features per split. This approach aimed to enhance the model's generalization capabilities while avoiding overfitting.
+##### Naive Bayes:
+The Naive Bayes model, which is well-suited for text classification, was fitted using the preprocessed features. Then, applied techniques like TF-IDF to transform the text into numerical values. The model's performance was evaluated using the same evaluation metrics as the other algorithms.
 
 
 
